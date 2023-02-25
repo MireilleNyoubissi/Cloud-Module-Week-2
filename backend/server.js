@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv").config()
+const cors = require("cors");
 const db = require("./config/db");
 const port = process.env.PORT || 5000;
 
@@ -10,6 +11,7 @@ const port = process.env.PORT || 5000;
 
   
 const app = express()
+app.use(cors());
 
 
 //Get all cities
