@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 require("dotenv").config();
 
+
 function App() {
   
    const [city, setCity] = useState([]);
@@ -10,7 +11,7 @@ function App() {
   
    
    const fetchDataCities = async () => {
-    const response = await fetch(process.env.API_CITY);
+    const response = await fetch("http://54.157.107.176:5000/cities");
     if (!response.ok) {
       throw new Error("Data could not be fetched!");
     } else {
@@ -34,7 +35,7 @@ function App() {
   
   const fetchDataAdjectives = async () => {
     
-    const response = await fetch(process.env.API_ADJECTIVE);
+    const response = await fetch("http://54.157.107.176:5000/adjectives");
     if (!response.ok) {
       throw new Error("Data could not be fetched!");
     } else {
