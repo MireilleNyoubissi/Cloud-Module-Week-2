@@ -2,17 +2,28 @@ const express = require("express");
 const dotenv = require("dotenv").config()
 const cors = require("cors");
 const db = require("./config/db");
+const path = require("path");
 const port = process.env.PORT || 5000;
-
-
-
-
-
-
   
 const app = express()
 app.use(cors());
 
+
+const _dirname = path.dirname("");
+const buildPath = path.join(_dirname, "../frontend/build");
+
+app.use(express.static(buildPath));
+
+app.get("/*", function (req, res) {
+  res.sendFile(
+    path.join(__dirname, "../frontend/build/index.html"),
+    function (err) {
+      if (err) {
+        res.status(500).send(err);
+      }
+    }
+  );
+});
 
 //Get all cities
 
