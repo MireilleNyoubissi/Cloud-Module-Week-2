@@ -1,0 +1,17 @@
+{
+  "name": "apicities",
+  "version": "1.0.0",
+  "description": "",
+  "main": "serverCities.js",
+  "scripts": {
+    "start": "node serverCities.js"
+  },
+  "author": "Mireille",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongodb": "^5.1.0"
+  }
+}

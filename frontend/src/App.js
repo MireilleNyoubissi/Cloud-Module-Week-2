@@ -11,7 +11,7 @@ function App() {
   
    
    const fetchDataCities = async () => {
-    const response = await fetch("http://54.157.107.176:5000/cities");
+    const response = await fetch("http://localhost:4000/cities");
     if (!response.ok) {
       throw new Error("Data could not be fetched!");
     } else {
@@ -35,7 +35,7 @@ function App() {
   
   const fetchDataAdjectives = async () => {
     
-    const response = await fetch("http://54.157.107.176:5000/adjectives");
+    const response = await fetch("http://localhost:5000/adjectives");
     if (!response.ok) {
       throw new Error("Data could not be fetched!");
     } else {
