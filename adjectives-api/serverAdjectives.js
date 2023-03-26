@@ -1,9 +1,9 @@
 const express = require("express");
 const dotenv = require("dotenv").config();
 const cors = require("cors");
-const port = process.env.PORTAd || 5000;
+const port = process.env.PORT || 5000;
 const { MongoClient } = require("mongodb");
-const connectionString = process.env.MONGO_URI || "";
+const connectionString = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cloudtwo.gufwzid.mongodb.net/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority`;
 
 const client = new MongoClient(connectionString);
 
@@ -19,7 +19,9 @@ connectDB();
 const db = client.db("sentenceapp");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "*",
+}));
 
 
 //Get all adjectives

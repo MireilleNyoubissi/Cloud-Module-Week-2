@@ -1,0 +1,19 @@
+version: "3"
+services:
+  adjectives-api:
+    build: 
+      context: ./adjectives-api
+      args:
+        NODE_ENV: production
+    environment:
+      - NODE_ENV=production 
+  cities-api:
+    build: 
+      context: ./cities-api
+      args:
+        NODE_ENV: production
+    environment:
+      - NODE_ENV=production
+    
+  
+  

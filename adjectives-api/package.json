@@ -4,7 +4,8 @@
   "description": "",
   "main": "serverAdjectives.js",
   "scripts": {
-    "start": "node serverAdjectives.js"
+    "start": "node serverAdjectives.js",
+    "dev": "nodemon serverAdjectives.js"
   },
   "author": "Mireille",
   "license": "MIT",
@@ -13,5 +14,8 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongodb": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
   }
 }
