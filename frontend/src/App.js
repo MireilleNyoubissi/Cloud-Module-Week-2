@@ -10,7 +10,7 @@ function App() {
   
    
    const fetchDataCities = async () => {
-    const response = await fetch("http://localhost:5002/cities");
+    const response = await fetch("url");
     if (!response.ok) {
       throw new Error("Data could not be fetched!");
     } else {
@@ -34,7 +34,7 @@ function App() {
   
   const fetchDataAdjectives = async () => {
     
-    const response = await fetch("http://localhost:5001/adjectives");
+    const response = await fetch("url");
     if (!response.ok) {
       throw new Error("Data could not be fetched!");
     } else {
